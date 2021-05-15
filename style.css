@@ -1,0 +1,170 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/* použitá písma:
+text: Merriweather (font-family: 'Merriweather', serif;)
+hlavní nadpis: Raleway (font-family: 'Raleway', sans-serif;)
+
+barvy:
+pozadi           #f5f5f5
+dekorace nadpisů #629edb
+
+3 verze layoutu, breakpointy odvoď podle citu:
+
+nejužší verze
+==============================
+- všechno je pod sebou v jedné úzké nudli
+- v menu jsou položky pod sebou, menu samotné je nad obsahem
+- v galerii jsou všechny obrázky pod sebou
+- popisky k obrázkům jsou vždy pod obrázkem (k těm v textu i k těm v galerii)
+ */
+
+ :root {
+     --barva-popisky: #b8b8b8;
+     --barva-pozadi: #f5f5f5;
+     --barva-dekorace: #629edb;
+ }
+
+body {
+     font-family: 'Merriweather', serif;
+     margin: 0;
+     background-color: var(--barva-pozadi);
+     line-height: 1.5;
+}
+
+.obal {
+    margin: auto;
+    max-width: 960px;
+    background-color: #ffffff;
+}
+
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 2rem
+}
+
+h2 {
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    margin: 0;
+}
+
+.hlavicka {
+    min-height: 150px;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/island-hlavicka.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+   
+}
+
+.hlavicka p {
+    font-weight: 700;
+}
+
+.hlavicka .autor {
+    font-style: italic;
+    font-weight: 300;
+}
+
+section img {
+    width: 100%;
+}
+
+.kapitola img {
+    margin-top: 2.5rem;
+}
+
+.navigace a {
+    display: block;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: #c5c4c4;
+    border-bottom: 1px solid var(--barva-popisky);
+}
+
+.navigace {
+    padding: 3rem;
+    text-align: center;
+}
+
+.kapitola p {
+    padding: 0 1.5rem 0 1.5rem;
+    font-weight: 400;
+}
+
+.foto-autor,
+.foto-popis {
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: var(--barva-popisky);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.2;
+}
+
+.foto-popis {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.foto-autor a {
+    color: var(--barva-popisky);
+}
+
+.fotogalerie img {
+    margin-top: 1.5rem;
+}
+
+.paticka li {
+    list-style: none;
+}
+
+.paticka ul,
+.paticka p {
+    padding: 0;
+    margin: 0;
+}
+
+.paticka {
+    font-size: 0.7rem;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    margin-top: 2rem;
+    background: linear-gradient(to top, var(--barva-pozadi), 90%, var(--barva-popisky));
+}
+
+.paticka a,
+.paticka {
+    color: var(--barva-popisky);
+}
+
+.hlavicka hr {
+    width: 100px;
+    border-width: 0;
+    border-bottom: 2px solid #ffffff;
+    margin-top: 2rem;
+}
+
+section hr {
+    width: 100px;
+    border-width: 0;
+    border-bottom: 5px solid var(--barva-dekorace);
+    margin-bottom: 2rem;
+}
+
+
+
+
