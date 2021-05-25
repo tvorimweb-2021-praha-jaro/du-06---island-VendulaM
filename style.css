@@ -165,6 +165,87 @@ section hr {
     margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 550px) {
+    .navigace {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        width: 100%;
+      }
 
+    .navigace a {
+        font-size: 0.7rem;
+        width: 25%;
+        border-top: 1px solid var(--barva-popisky);
+        border-right: 1px solid var(--barva-popisky);
+    }
 
+    .navigace .navigace-fotogalerie {
+        border-right: none;
+    }
 
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+
+    .foto-foto-autor {
+        position: relative;
+
+    }
+
+    .kapitola .foto-autor {
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        color: #ffffff;
+    }
+
+    .kapitola .foto-autor a {
+        color: #ffffff;
+    }
+
+    .foto-obal {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 0;
+    }
+
+    .fotogalerie img {
+        margin: 0;
+    }
+    
+    
+    .foto-foto-popis-autor {
+        width: 50%;
+        margin: 0;
+        position: relative;
+        }
+
+    
+    .foto-popis-autor {
+        position: absolute;
+        bottom: 0;
+        padding: 0.2rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: 1s ease;
+        }
+
+        .foto-foto-popis-autor:hover .foto-popis-autor, 
+        .foto-foto-popis-autor:focus .foto-popis-autor {
+            opacity: 1;
+        }
+
+        .foto-foto-popis-autor:last-child {
+            width: 100%;
+        }
+
+    .paticka {
+        margin-top: 0;
+    }
+}
